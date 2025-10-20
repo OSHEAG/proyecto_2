@@ -1,0 +1,411 @@
+/* General */
+/* Establece márgenes y relleno a cero y utiliza "border-box" para calcular el tamaño incluyendo bordes y relleno. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo global para el cuerpo del documento */
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif; /* Define la fuente principal del sitio. */
+    color: #514E17; /* Color de texto en tono verde oscuro. */
+    line-height: 1.9; /* Mejora la legibilidad al establecer la altura de línea. */
+    background-color: #BEAD7D; /* Fondo en beige claro. */
+}
+
+/* Estilo del encabezado */
+header {
+    position: fixed; /* Hace que el encabezado permanezca visible al hacer scroll. */
+    top: 0; /* Lo posiciona en la parte superior de la página. */
+    width: 100%; /* Abarca todo el ancho de la ventana. */
+    background-color: #9D7B35; /* Fondo marrón dorado para coherencia con la paleta. */
+    padding: 10px 20px; /* Espaciado interno para los elementos del encabezado. */
+    display: flex; /* Utiliza diseño flexible para organizar los elementos horizontalmente. */
+    justify-content: space-between; /* Distribuye los elementos en extremos opuestos. */
+    align-items: center; /* Alinea verticalmente los elementos del encabezado. */
+    z-index: 1000; /* Asegura que el encabezado esté siempre encima de otros elementos. */
+}
+
+/*nav {
+    display: flex;
+    margin-top: 8px;
+}*/
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* separa logo y menú */
+    width: 100%;
+}
+
+/* Navegación dentro del encabezado */
+/*header nav ul {
+   /* list-style: none; /* Elimina los puntos de lista predeterminados. */
+    /*display: flex; /* Muestra los elementos de la lista en una fila. */
+    /*gap: 2em; /* Espaciado entre los elementos de la lista. */
+    /*-top: 0.4rem;
+    /*margin-left: 15px;
+/*}*/
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+    margin: 0 auto;        /* centra horizontalmente */
+    padding: 0;
+    justify-content: center; /* centra los enlaces */
+    flex: 1;                /* permite que el menú ocupe espacio central */
+}
+/* Estilo de los enlaces de la barra de navegación */
+header nav ul li a {
+    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces. */
+    font-size: 1.4em;
+    color: #514E17; /* Texto verde oscuro para inicio,sobre nosotros,servicios,precios,contacto . */
+    font-weight: bold; /* Resalta los enlaces con texto en negrita. */
+    padding: 5px 70px; /* Espaciado interno en los enlaces. */
+    border-radius: 4px; /* Bordes redondeados para los enlaces. */
+    transition: background-color 0.7s, color 0.5s; /* Suaviza el cambio de color. */
+}
+
+/* Efecto al pasar el cursor sobre los enlaces */
+header nav ul li a:hover {
+    color: #514E17; /* Fondo verde oscuro al pasar el cursor. */
+    background-color: #BEAD7D;  /* Cambia el texto a beige claro. */
+}
+
+/* Espaciado superior para evitar solapamiento con el encabezado fijo */
+main {
+    padding-top: 80px; /* Ajusta el contenido para que no quede cubierto. */
+}
+
+/* Sección de contenido */
+section {
+    min-height: 100vh; /* Cada sección ocupa al menos el 100% de la altura de la ventana. */
+    min-width: 100%;
+    padding: 60px 20px; /* Espaciado interno para el contenido. */
+    text-align: center; /* Centra el texto. */
+    background-color: #FFFBEA; /* Fondo muy claro para contraste con los tonos cálidos. */
+    margin-bottom: 20px; /* Espaciado entre secciones. */
+    justify-content: center;
+}
+
+/* Títulos dentro de las secciones */
+section h2 {
+    font-size: 2em; /* Tamaño grande para destacar títulos. */
+    margin-bottom: 20px; /* Espaciado inferior para separación del texto. */
+    color: #514E17; /* Verde oscuro para títulos. */
+}
+
+/* Inicio */
+#inicio {
+    display: flex;
+    overflow: auto;
+}
+
+#inicio h2 {
+    font-size: 4em;
+    margin-top: 120px;
+    color: #514E17;
+}
+
+#inicio h3 {
+    color: #9D7B35; /* Marrón dorado para subtítulos. */
+    font-size: 2em;
+    padding-bottom: 20px;
+}
+
+.inicio img {
+    min-width: 40%;
+    border-radius: 10px;
+     margin-top: 80px; /* separa la imagen del encabezado */
+}
+
+.inicio {
+    margin: 50px 0px;
+}
+
+/* Sección sobre nosotros */
+#sobre-nosotros {
+    display: flex;
+    overflow: auto;
+}
+
+.nosotros img {
+    object-fit: contain;
+}
+
+.nosotros {
+    margin: 50px 50px 34px;
+}
+
+.nosotros h2 {
+    margin-top: 150px;
+    font-size: 3em;
+    color: #9D7B35;
+}
+
+/* Sección servicios */
+#servicios {
+    overflow: auto;
+}
+
+#servicios div {
+    border-radius: 10px;
+    width: 98%;
+}
+
+#servicios div img {
+    width: 300px;
+    height: 300px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.servicios2 {
+    display: flex;
+}
+
+.tarjetas div {
+    max-width: 50%;
+}
+
+.tarjetas {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #BEAD7D; /* Bordes en tono beige claro. */
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    padding: 15px;
+    align-items: center;
+    margin: 15px;
+    background-color: #FFF8E0; /* Fondo suave para tarjetas. */
+}
+
+/* Sección precios */
+#precios {
+    overflow: auto;
+}
+
+.precios {
+    margin: 30px;
+    min-width: 30%;
+    min-height: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #BEAD7D;
+    padding: 15px;
+    background-color: #FFFBEA;
+}
+
+.precios h3 {
+    margin-top: 10px;
+    color: #514E17;
+}
+
+.precios img {
+    margin-top: 80px;
+    min-width: 170px;
+    width: 300px;
+    height: 300px;
+    
+}
+
+/* Planes */
+.planes {
+    display: flex;
+}
+
+/* Sección contacto */
+#contacto {
+    display: flex;
+    background: url('Contacto.jpg');
+    overflow: auto;
+    flex-wrap: wrap;
+}
+.supercontacto{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+/* Contenedor del formulario */
+.form-container {
+    margin: 180px 80px 30px;
+    width: 100%;
+    max-width: 500px;
+    max-height: 450px;
+    background-color: #FFFBEA;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Título del formulario */
+.form-container h2 {
+    text-align: center;
+    color: #514E17;
+    margin-bottom: 20px;
+}
+
+/* Campos del formulario */
+.form-container input, .form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #BEAD7D;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Botón de envío del formulario */
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #9D7B35;
+    color: #FFFBEA;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto al pasar el cursor sobre el botón */
+.form-container button:hover {
+    background-color: #514E17;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #9D7B35;
+    position: relative;
+    color: #FFFBEA;
+    font-size: 1.5em;
+}
+
+/* ========================
+    Diseño responsive
+   ======================== */
+@media (max-width: 768px) {
+    /* Puedes añadir ajustes intermedios si lo necesitas */
+}
+
+/* Para móviles y pantallas pequeñas */
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    header nav ul {
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    header nav ul li a {
+        font-size: 0.5em;
+        padding: 0;
+        
+    }
+
+    nav {
+        flex-direction: row;
+    }
+
+    nav div img {
+        max-width: 40%;
+        height: 60px;
+        width: auto;
+        margin-left: 20px; /* separa un poco del borde */
+    }
+
+    #inicio {
+        flex-wrap: wrap;
+    }
+
+    #inicio h2 {
+        font-size: 2em;
+        margin: 2%;
+    }
+
+    #inicio h3 {
+        font-size: 1em;
+    }
+
+    .inicio img {
+        max-width: 100%;
+    }
+
+    .inicio {
+        margin: 0;
+    }
+
+    #sobre-nosotros {
+        flex-wrap: wrap;
+    }
+
+    .nosotros img {
+        max-width: 100%;
+    }
+
+    .tarjetas div {
+        min-width: 100%;
+    }
+
+    .tarjetas {
+        min-width: 100%;
+        flex-wrap: wrap;
+        margin: 15px 0;
+    }
+
+    .servicios2 {
+        flex-wrap: wrap;
+    }
+
+    .planes {
+        flex-wrap: wrap;
+    }
+
+    .precios {
+        margin: 10px;
+    }
+
+    .precios img {
+        max-width: 70px;
+        margin-top: 0;
+    }
+
+    #contacto {
+        flex-wrap: wrap;
+    }
+
+    .mapa {
+        margin: 0px;
+        max-height: none;
+    }
+
+    .mapa iframe {
+        max-width: 300px;
+        max-height: 50%;
+    }
+
+    .form-container {
+        padding: 15px;
+        max-width: 100%;
+        margin: 20px 0;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
+/*trabajo 15/10/2025*/
+.imagen-izquierda {
+  height: 800px;   /* 🔸 reduce la altura a tu gusto (puedes probar 120px, 180px, etc.) */
+  width: 4000px;     /* mantiene proporciones */
+  object-fit: contain; /* evita recortes o deformaciones */
+  margin-right: 20px;  /* opcional: da espacio respecto al texto */
+}
